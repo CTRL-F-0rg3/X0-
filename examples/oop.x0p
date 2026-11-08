@@ -1,0 +1,42 @@
+package oop
+
+enum Color { Red, Green, Blue }
+
+class Counter {
+    var count: int
+
+    public fun increment(step: int) void {
+        count = count + step
+    }
+
+    public fun get() int {
+        return count
+    }
+}
+
+public fun main() int {
+    // enum
+    print(Color.Blue)
+
+    // class + methods + fields
+    val c = new Counter()
+    c.increment(5)
+    c.increment(3)
+    print(c.get())
+
+    // for-in exclusive
+    for i in 0..3 {
+        defer print(i + 100)
+        print(i)
+    }
+
+    // for-in inclusive + break
+    for j in 0...4 {
+        if j == 3 {
+            break
+        }
+        print(j)
+    }
+
+    return 0
+}

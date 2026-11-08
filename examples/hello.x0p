@@ -1,0 +1,36 @@
+package hello
+
+public enum Color {
+    Red, Green, Blue
+}
+
+public struct Point {
+    val x: int
+    val y: int
+}
+
+public class Greeter implements Speaker {
+    private val name: String
+
+    public fun greet() void {
+        val msg = "hello, " + name
+        print(msg)
+    }
+
+    public fun count_to(n: int) void {
+        var i = 0
+        while i < n {
+            print(i)
+            i = i + 1
+        }
+        for x in 0..n {
+            defer cleanup()
+            print(x)
+        }
+        if n > 0 {
+            print("positive")
+        } else {
+            print("non-positive")
+        }
+    }
+}
